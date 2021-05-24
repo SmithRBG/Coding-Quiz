@@ -74,16 +74,17 @@ var question = [
    },
 ]
 
-var startBtn = document.getElementsByClassName("startBtn");
-var startContainer = document.getElementsByClassName("start_Container");
-var questionBox = document.getElementsByClassName("questionBox");
+var startBtn = document.querySelector("#startBtn");
+var startContainer = document.querySelector(".start_Container");
+var questionBox = document.querySelector(".questionBox");
+
+startBtn.addEventListener('click', start);
 
 function start() {
-   startBtn.addeventListener('click', start);
-   startContainer.style.display = "none";
+   startContainer.style.display = "hidden";
    questionBox.style.display = "block"; //will this override the css and display the questions??
    getQuestion();
-}
+};
 
 
 var endBox = document.getElementsByClassName("endBox");
