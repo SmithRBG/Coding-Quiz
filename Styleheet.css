@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    color: navy;
+
+}
+
+.start_container,
+.questionBox,
+.end-box  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#99ccff;
+    padding: 25px;
+}
+
+
+button {
+    background-color: white;
+    color: navy;
+    border: 2px solid navy;
+    font-size: 16px;
+    padding: 14px 40px;
+    border-radius: 12px;
+}
+
+button:hover {
+    transition-duration: 0.4s;
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+}
+.start_container {
+    display: "";
+}
+
+.questionBox {
+    display: none; /*hides question box on start*/
+    width: 550px;
+}
+
+.questionBox header {
+    height: 70px;
+    padding:  0 30px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.questionBox .timer {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    /*padding: 0 8px*/
+    height: 45px;
+    width: 145px;
+    background-color:white;
+    border-radius: 12px;
+}
+
+.questions {
+    margin: 25px;
+}
+
+.answer {
+    background-color: white;
+    padding: 0 5px 0 5px;
+    border-radius: 12px;
+    margin: 5px;
+}
+
+.answer:hover {
+    background-color: palegoldenrod;
+}
+
+.endBox {
+    display: none; /*hides end box*/
+}
+#endScreen {
+    padding: 100px;
+}
+
+/* things I need to do: 
+ -figure out how to make each screen disappear. X
+ -check this video: https://www.youtube.com/watch?v=pQr4O1OITJo
+ -check this: https://github.com/lindyem/codingquiz
+ -how to save data to local server
+ -how to click through each event */
