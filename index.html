@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styleheet.css">
+    <title>Coding Quiz</title>
+</head>
+<body>
+    <!--Start box-->
+    <div class="start_container">
+        
+        <header>
+            <h1>The Most Excellent Quiz.</h1>
+        </header>
+        <div class="rules-list">
+         <ul>
+            <li>You have <strong>One Minute</strong> to answer all the questions.</li>
+            <li>There are <strong>five questions</strong>.</li>
+            <li>If you make a mistake, the clock will <strong> subtract time</strong>.</li>
+            <p>Good Luck!</p>
+         </ul>
+        </div>
+        <div class="startBtn"><button class="startBtn">Start</button></div>
+    </div>
+    
+    <!--Questions-->
+    <section class="questionBox">
+        <header>
+            <h1>The Most Excellent Quiz!</h1>
+            <div class="timer">
+                <div>Time Left</div>
+                <div class="seconds">60</div>
+            </div>
+        </header>
+
+        <section class="question">
+            <h3>Question 1</h3>
+
+            <ol class="questions">
+                <li class="answer">Answer 1</li>
+                <li class="answer">Answer 2</li>
+                <li class="answer">Answer 3</li>
+            </ol>
+        
+        </section>
+        <footer class="buttons">
+        <button class="next">Next</button>
+        </footer>
+        
+    </section>
+
+    <!--Ending/ Game over-->
+    <section class="endBox" id="endScreen">
+        <div>
+            <h3>Done!</h3>
+            <h4>High Score</h4>
+                <span></span>
+                <form></form>
+        </div>
+
+        <div class="buttons">
+        <button class="restart">Restart</button>
+        </div>
+
+    </section>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
