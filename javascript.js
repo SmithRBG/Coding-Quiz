@@ -25,7 +25,7 @@ const index = 0
 
 function getQuestion() {
    const currentQ = question [index]
-   questions.textContent = currentQ.title // ask what this means????
+   questions.textContent = currentQ.title // getting the text of the current question from the var array title
    choices.innerHTML = "" //empties out addtional answers
    currentQ.choices.forEach (function(choice,i){
       const choiceBtn = document.createElement("button")
@@ -35,12 +35,24 @@ function getQuestion() {
       choiceBtn.onclick = answerSelect
    })
 }
-function answerSelect() { //this is talking about the orange below
+
+/* function getChoices() {
+   const currentChoice = question [index]
+   choices.textContent = currentChoice.choice
+   choices.innerHTML
+   
+
+}
+ */
+
+function answerSelect() { //this is talking about question var
    if(this.value !== question[index].answer) {
       countdown -= 10 //this is taking 10 seconds away, when the wrong answer is pressed
    }
    index++ //This will cycle to the next question
 }
+
+
 
 var question = [
    {
@@ -75,14 +87,14 @@ var question = [
 ]
 
 var startBtn = document.querySelector("#startBtn");
-var startContainer = document.querySelector(".start_Container");
+var startContainer = document.querySelector(".start_container");
 var questionBox = document.querySelector(".questionBox");
 
 startBtn.addEventListener('click', start);
 
 function start() {
-   startContainer.style.display = "hidden";
-   questionBox.style.display = "block"; //will this override the css and display the questions??
+   startContainer.style.display = "none";
+   questionBox.style.display = "block"; //will override CSS and display questionBox
    getQuestion();
 };
 
