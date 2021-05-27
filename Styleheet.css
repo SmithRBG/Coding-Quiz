@@ -14,7 +14,7 @@ body {
 
 .start_container,
 .questionBox,
-.end-box  {
+.endBox  {
     position: absolute;
     top: 50%;
     left: 50%;
