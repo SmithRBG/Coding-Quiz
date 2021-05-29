@@ -1,23 +1,3 @@
-/* const start = document.querySelector(".start button");
-const question_box = document.querySelector(".question-box .act .hide");
-const rules_list = document.querySelector(".rules-list .act .hide")
-const restart = document.querySelector(".restart button");
-const next = document.querySelector(".next button");
-
-//start button
-start.onclick = () => {
-    rules_list.classlist.remove(".hide");
-    question_box.classList.add(".act");
-
-// $('.rules-list').css('display','none');
-};
- */
-
-
-//work on button to start the quiz 
-//put div around landing, and then onclick hide landing and start quiz
-
-
 //Cycling through the questions
 
 var questions = document.getElementById("question-title"); //style
@@ -109,14 +89,43 @@ function start() {
 //End Screen
 
 function quizOver() {
-   console.log("test")
    var endScreen = document.querySelector(".endBox")
    endScreen.removeAttribute("class")
    //endScreen.style.display = endScreen.style.display === "none"?"":"block"
    var qSection = document.querySelector(".qSection")
    qSection.setAttribute("class", "hide")
+   var qBox = document.querySelector(".questionBox");
+   qBox.setAttribute("class", "hide");
+   qBox.setAttribute("style", "display:none");
    //qSection.addClass("display", "none")
-}
+ }
+
+
+//local storage
+
+var submitBtn = document.querySelector("#submitBtn")
+
+submitBtn.addEventListener("click", function(event)) {
+   event.preventDefault();
+   var 
+};
+
+localStorage.setItem("highScore", JSON.stringify())
+
+
+
+
+
+//timer for quiz
+
+var timeLeft = 60;
+
+function submitScore(event) {
+   var initials = formInput.value;
+   localStorage.setItem(initials, timeLeft);
+ 
+   renderHighScores();
+ }
 
 
 
