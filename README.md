@@ -17,4 +17,5 @@ Coding Quiz
 
 ## JavaScript
 
-* The JS contains all of the questions and answers for the game to work. It also includes 
+* The JS contains all of the questions and answers for the game to work.
+* All script features take place in the JS file.
