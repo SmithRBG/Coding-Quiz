@@ -3,13 +3,14 @@
 var questions = document.getElementById("question-title"); //style
 var choices = document.getElementById("questions");//style
 var index = 0 //this will start everything at 0, and you can add to it depending on how you need it in the function
-var count = document.querySelector("#count")
+var countdown = document.querySelector("#count")
+var count = 60;
 
 function getQuestion() {
    const currentQ = question [index]
    questions.textContent = currentQ.title // getting the text of the current question from the var array title
    choices.innerHTML = "" //empties out addtional answers
-   currentQ.choices.forEach (function(choice,i){
+   currentQ.choices.forEach (function(choice,i) {
       const choiceBtn = document.createElement("button")
       choiceBtn.setAttribute("class", "choice") //assigning class of choice to the button
       choiceBtn.setAttribute("value", choice) //value coming from below (choices section in each question)
@@ -86,21 +87,16 @@ function start() {
    getQuestion();
 
    //timer
-   var count = 60;
-interval = setInterval(function() {
-   document.querySelector('#count').innerHTML=count;
+   interval = setInterval(function() {
+   document.querySelector('#count').innerHTML = count;
    count--;
    if(count === 0) {
       clearInterval(interval);
       document.querySelector('#count').innerHTML = 'Done';
       alert("Times up!");
+      clearTimeout(count);
    }
 }, 1000);
-  /*  const choiceBtn = document.createElement("button")
-   choiceBtn.addEventListener('click', function() {
-      (answerSelect !== true)
-      count -=10
-   }) */
    
 };
 
@@ -118,27 +114,44 @@ function quizOver() {
    //qSection.addClass("display", "none")
  }
 
+ //restart
+
  var restart = document.querySelector('.restart')
 
  restart.addEventListener('click', function() {
-   window.location.reload();
+    window.location.reload();
  })
 
 //local storage
 
-/* var submitBtn = document.querySelector("#submitBtn")
+/* var input = document.getElementById('saveServer').value;
+localStorage.setItem('server', input);
+
+document.getElementById('saveServer').value = localStorage.getItem('server');
+ */
+
+
+var user = document.getElementById("saveServer");
+var submitBtn = document.querySelector("#submitBtn");
 
 submitBtn.addEventListener("click", function(event) {
    event.preventDefault();
 
-)};
+   var userInput = document.getElementById("saveServer").value;
+ 
+localStorage.setItem("userInput", JSON.stringify(userInput));
+renderMessage();
+});
 
-localStorage.setItem("submitBtn", JSON.stringify()) */
+function renderMessage() {
+   var lastScore = JSON.parse(localStorage.getItem("userInput"));
+   if (lastScore !== null) {
+     document.querySelector("#enteredName").textContent = lastScore
+   }
+ }
 
 
-
-
-/* var timeLeft = 60;
+/*
 
 function submitScore(event) {
    var initials = formInput.value;
