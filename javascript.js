@@ -3,7 +3,7 @@
 var questions = document.getElementById("question-title"); //style
 var choices = document.getElementById("questions");//style
 var index = 0 //this will start everything at 0, and you can add to it depending on how you need it in the function
-var countdown = document.querySelector(".timer")
+var count = document.querySelector("#count")
 
 function getQuestion() {
    const currentQ = question [index]
@@ -21,7 +21,7 @@ function getQuestion() {
 
 function answerSelect() { 
    if(this.value !== question[index].answer) { //this is talking about question var
-      countdown -= 10 //this is taking 10 seconds away, when the wrong answer is pressed
+      count -= 10 //this is taking 10 seconds away, when the wrong answer is pressed
       alert ("Oops, looks like that was the wrong answer partner.")
    }
    else if (this.value === question[index].answer) { //this is grabbing the below
@@ -84,6 +84,24 @@ function start() {
    startContainer.style.display = "none";
    questionBox.style.display = "block"; //will override CSS and display questionBox
    getQuestion();
+
+   //timer
+   var count = 60;
+interval = setInterval(function() {
+   document.querySelector('#count').innerHTML=count;
+   count--;
+   if(count === 0) {
+      clearInterval(interval);
+      document.querySelector('#count').innerHTML = 'Done';
+      alert("Times up!");
+   }
+}, 1000);
+  /*  const choiceBtn = document.createElement("button")
+   choiceBtn.addEventListener('click', function() {
+      (answerSelect !== true)
+      count -=10
+   }) */
+   
 };
 
 //End Screen
@@ -100,32 +118,34 @@ function quizOver() {
    //qSection.addClass("display", "none")
  }
 
+ var restart = document.querySelector('.restart')
+
+ restart.addEventListener('click', function() {
+   window.location.reload();
+ })
 
 //local storage
 
-var submitBtn = document.querySelector("#submitBtn")
+/* var submitBtn = document.querySelector("#submitBtn")
 
-submitBtn.addEventListener("click", function(event)) {
+submitBtn.addEventListener("click", function(event) {
    event.preventDefault();
-   var 
-};
 
-localStorage.setItem("highScore", JSON.stringify())
+)};
 
-
+localStorage.setItem("submitBtn", JSON.stringify()) */
 
 
 
-//timer for quiz
 
-var timeLeft = 60;
+/* var timeLeft = 60;
 
 function submitScore(event) {
    var initials = formInput.value;
    localStorage.setItem(initials, timeLeft);
  
    renderHighScores();
- }
+ } */
 
 
 
