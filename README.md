@@ -18,4 +18,4 @@ Coding Quiz
 ## JavaScript
 
 * The JS contains all of the questions and answers for the game to work.
-* All script features take place in the JS file.
+* All script features take place in the JS file with vanilla JavaScript.
