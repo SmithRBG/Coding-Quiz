@@ -19,3 +19,7 @@ Coding Quiz
 
 * The JS contains all of the questions and answers for the game to work.
 * All script features take place in the JS file with vanilla JavaScript.
+
+![Web1](https://user-images.githubusercontent.com/81999910/120087141-8f40ce00-c0b3-11eb-8091-4fb2b8f0b317.JPG)
+
+https://smithrbg.github.io/Coding-Quiz/
