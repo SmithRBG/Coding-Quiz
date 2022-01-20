@@ -1,5 +1,11 @@
 # Coding-Quiz
-Coding Quiz : You have One Minute to answer all the questions. There are five questions. If you make a mistake, the clock will subtract time.
+Coding Quiz  
+
+```
+You have One Minute to answer all the questions. 
+There are five questions. 
+If you make a mistake, the clock will subtract time.
+```
 
 ## HTML
 
