@@ -1,12 +1,6 @@
 # Coding-Quiz
-Coding Quiz
+Coding Quiz : You have One Minute to answer all the questions. There are five questions. If you make a mistake, the clock will subtract time.
 
-## The main take away from this coding quiz is the following:
-```
-* You have One Minute to answer all the questions.
-* There are five questions.
-* If you make a mistake, the clock will subtract time.
-```
 ## HTML
 
 * The HTML is a simple skeleton set up for the CSS and JS. 
